@@ -6,6 +6,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HealthController {
+    @GetMapping("/")
+    public String index() {
+        return "OK";
+    }
+
     @GetMapping("/healthz")
     public ResponseEntity<String> healthz() {
         return ResponseEntity.ok("OK");

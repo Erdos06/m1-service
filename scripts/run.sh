@@ -3,4 +3,4 @@ set -e
 
 PORT="${PORT:-8080}"
 
-./mvnw spring-boot:run -Dspring-boot.run.arguments="--server.port=$PORT"
+./mvnw spring-boot:run -Dspring-boot.run.arguments="--server.port=${PORT}"
