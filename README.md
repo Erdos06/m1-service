@@ -1,22 +1,31 @@
 # M1 Spring Boot Service
-240107078
 
+A simple HTTP web service built with Java and Spring Boot.
 
-A simple HTTP service written in Java (Spring Boot) designed to meet all Milestone 1 requirements for the course.
+## Description
 
-## Overview / Description
-
-This application provides a basic HTTP web service structure built with Spring Boot and Maven. It serves as the foundation repository for future feature additions throughout the semester.
-
-It includes:
-- A lightweight `GET /healthz` endpoint returning HTTP 200 OK.
-- Standard scripts complying with the 4-line contract (`run.sh`, `test.sh`).
-- Automated unit test suite.
+This project is a RESTful HTTP service created for Milestone 1. It provides a health check endpoint, dynamic port binding, and automated testing scripts according to the assignment specification.
 
 ## How to Run
 
-To start the HTTP service, run the startup script:
+To start the service, execute the startup script from the root directory:
 
-```bash
 ./scripts/run.sh
 
+### Port
+
+By default, the service listens on port 8080. You can specify a custom port using the PORT environment variable:
+
+PORT=9090 ./scripts/run.sh
+
+## How to Test
+
+To run the automated test suite and check the service status, run:
+
+./scripts/test.sh
+
+The script will execute all JUnit tests and output the total count in the required TESTS format.
+
+## Endpoints
+
+- GET /healthz - Returns 200 OK with body OK. Response time is under 1 second and performs no database queries.

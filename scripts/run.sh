@@ -3,6 +3,4 @@ set -e
 
 PORT="${PORT:-8080}"
 
-echo "Starting Spring Boot application on port $PORT..."
-
-./gradlew bootRun --args="--server.port=$PORT"
+./mvnw spring-boot:run -Dspring-boot.run.arguments="--server.port=$PORT"
