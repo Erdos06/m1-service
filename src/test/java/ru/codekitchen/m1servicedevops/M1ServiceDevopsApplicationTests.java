@@ -30,7 +30,7 @@ class M1ServiceDevopsApplicationTests {
     @Test
     void testGreetingServiceDefault() {
         String result = greetingService.getGreeting(null);
-        assertEquals("Hello, Guest!", result);
+        assertEquals("Hello0, Guest!", result);
     }
 
     @Test
